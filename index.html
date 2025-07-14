@@ -7,8 +7,24 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
-    <div class="test">hello</div>
+    <div class="page">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="header__logo">
+              <img src="src/icons/logo.svg" alt="logo" />
+            </div>
+            <div class="header__buttons">
+              <button class="button button_add">Добавить контакт +</button>
+              <button class="button button_filter">Группы</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="content">
+        <p class="content__placeholder">Список контактов пуст</p>
+      </main>
+    </div>
     <script type="module" src="/src/ts/main.ts"></script>
   </body>
 </html>

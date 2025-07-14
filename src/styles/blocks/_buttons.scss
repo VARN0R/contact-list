@@ -1,0 +1,33 @@
+.button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: var(--color-white);
+  font-size: 14px;
+
+  &_add {
+    background-color: var(--color-red);
+    transition: 0.5s all;
+    &:hover {
+      background-color: var(--color-red-hover);
+    }
+    @media (max-width: 768px) {
+      height: 50px;
+      margin-top: 10px;
+    }
+  }
+
+  &_filter {
+    background-color: var(--color-blue);
+    transition: 0.5s all;
+    &:hover {
+      background-color: var(--color-blue-hover);
+    }
+    @media (max-width: 768px) {
+      width: 82px;
+      margin-top: 70px;
+      margin-left: 268px;
+    }
+  }
+}
