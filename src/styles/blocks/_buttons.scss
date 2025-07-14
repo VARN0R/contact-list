@@ -30,4 +30,23 @@
       margin-left: 268px;
     }
   }
+
+  &_save {
+    padding: 10px 19px;
+    background-color: var(--color-blue);
+    transition: 0.5s all;
+    &:hover {
+      background-color: var(--color-blue-hover);
+    }
+  }
+
+  &_add-blue {
+    background: none;
+    color: var(--color-blue);
+    transition: 0.5s all;
+
+    &:hover {
+      background-color: var(--color-background);
+    }
+  }
 }

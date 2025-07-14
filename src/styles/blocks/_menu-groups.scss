@@ -1,0 +1,100 @@
+.menu-groups {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 312px;
+  background-color: var(--color-white);
+  height: 100vh;
+  padding: 24px;
+  left: -100%;
+  transition: 0.6s all;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  &.active {
+    visibility: visible;
+    left: 0;
+    opacity: 1;
+  }
+
+  &__header {
+    height: 46px;
+    border-bottom: 1px solid var(--color-background);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    margin-top: 16px;
+  }
+
+  &__close button {
+    outline: none;
+    border: none;
+    background: none;
+  }
+  &__close button:hover g rect {
+    fill: black;
+    opacity: 0.3;
+    transition: 0.5s all;
+  }
+
+  &__wrapper {
+    margin-top: 24px;
+  }
+
+  &__name {
+    background-color: var(--color-background);
+    padding: 10px 12px;
+    width: 214px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+  &__buttons {
+    position: fixed;
+    bottom: 24px;
+    left: 80px;
+  }
+
+  &__delete {
+    width: 38px;
+    height: 38px;
+    background: none;
+    border: 1px solid var(--color-background);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    &:hover {
+      background-color: var(--color-delete);
+      transition: 0.3s all;
+    }
+  }
+
+  &__delete:hover svg path {
+    fill: var(--color-white);
+    opacity: 1;
+    transition: 0.3s all;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-groups {
+    left: auto;
+    right: -100%;
+    &.active {
+      right: 0;
+      left: auto;
+    }
+    &__buttons {
+      left: auto;
+      right: 24px;
+    }
+  }
+}

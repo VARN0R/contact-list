@@ -25,6 +25,85 @@
         <p class="content__placeholder">Список контактов пуст</p>
       </main>
     </div>
+
+    <div class="menu-groups active">
+      <div class="menu-groups__header">
+        <div class="menu-groups__title">Группа контактов</div>
+        <div class="menu-groups__close">
+          <button>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1894_185)">
+                <rect width="24" height="24" rx="6" fill="white" />
+                <path
+                  opacity="0.3"
+                  d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1894_185">
+                  <rect width="24" height="24" rx="6" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-groups__wrapper">
+        <div class="menu-groups__item">
+          <input value="Друзья" class="menu-groups__name" />
+
+          <button class="menu-groups__delete">
+            <svg
+              width="16"
+              height="20"
+              viewBox="0 0 16 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.3"
+                d="M1.66667 17.3889C1.66667 18.55 2.61667 19.5 3.77778 19.5H12.2222C13.3833 19.5 14.3333 18.55 14.3333 17.3889V4.72222H1.66667V17.3889ZM4.26333 9.87333L5.75167 8.385L8 10.6228L10.2378 8.385L11.7261 9.87333L9.48833 12.1111L11.7261 14.3489L10.2378 15.8372L8 13.5994L5.76222 15.8372L4.27389 14.3489L6.51167 12.1111L4.26333 9.87333ZM11.6944 1.55556L10.6389 0.5H5.36111L4.30556 1.55556H0.611111V3.66667H15.3889V1.55556H11.6944Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="menu-groups__item">
+          <input value="Друзья" class="menu-groups__name" />
+          <button class="menu-groups__delete">
+            <svg
+              width="16"
+              height="20"
+              viewBox="0 0 16 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.3"
+                d="M1.66667 17.3889C1.66667 18.55 2.61667 19.5 3.77778 19.5H12.2222C13.3833 19.5 14.3333 18.55 14.3333 17.3889V4.72222H1.66667V17.3889ZM4.26333 9.87333L5.75167 8.385L8 10.6228L10.2378 8.385L11.7261 9.87333L9.48833 12.1111L11.7261 14.3489L10.2378 15.8372L8 13.5994L5.76222 15.8372L4.27389 14.3489L6.51167 12.1111L4.26333 9.87333ZM11.6944 1.55556L10.6389 0.5H5.36111L4.30556 1.55556H0.611111V3.66667H15.3889V1.55556H11.6944Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="menu-groups__buttons">
+          <button class="button button_add-blue">Добавить</button>
+          <button class="button button_save">Сохранить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+
     <script type="module" src="/src/ts/main.ts"></script>
   </body>
 </html>
