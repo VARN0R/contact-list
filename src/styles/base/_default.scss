@@ -1,0 +1,17 @@
+@import "../libs/bootstrap-reboot.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-main: #617e9d;
+  --color-hover: #6770ff;
+  --color-hover2: red;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
