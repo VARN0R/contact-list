@@ -1,14 +1,4 @@
-export interface Contact {
-  id: string;
-  name: string;
-  phone: string;
-  group: string;
-}
-
-export interface Group {
-  id: string;
-  name: string;
-}
+import { Contact, Group } from "../../types/types";
 
 export class StorageService {
   private static CONTACTS_KEY = "contacts";
@@ -44,7 +34,7 @@ export class StorageService {
     const contacts = this.getContacts();
     const idx = contacts.findIndex((c) => c.id === updated.id);
     if (idx === -1) return false;
-    // Check for duplicate phone (except self)
+
     if (contacts.some((c) => c.phone === updated.phone && c.id !== updated.id))
       return false;
     contacts[idx] = updated;
@@ -70,7 +60,7 @@ export class StorageService {
     const groups = this.getGroups();
     const idx = groups.findIndex((g) => g.id === updated.id);
     if (idx === -1) return false;
-    // Check for duplicate name (except self)
+    // проверка на дубликаты
     if (
       groups.some(
         (g) =>
@@ -87,7 +77,6 @@ export class StorageService {
   deleteGroup(id: string) {
     const groups = this.getGroups().filter((g) => g.id !== id);
     this.saveGroups(groups);
-    // Also delete all contacts in this group
     const contacts = this.getContacts().filter((c) => c.group !== id);
     this.saveContacts(contacts);
   }

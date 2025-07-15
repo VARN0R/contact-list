@@ -1,4 +1,5 @@
-import { StorageService, Contact, Group } from "./storage-service";
+import { Contact, Group } from "../../types/types";
+import { StorageService } from "./storage-service";
 import { Toaster } from "./toaster";
 import IMask from "imask";
 
