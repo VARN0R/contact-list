@@ -21,16 +21,109 @@
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background-color: var(--color-background);
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__wrapper {
+    padding-top: 126px;
+  }
 
   &__placeholder {
     color: var(--color-black);
     opacity: 0.3;
     font-size: 18px;
+    display: none;
+  }
+  &__item {
+    background-color: var(--color-white);
+    border-radius: 6px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+
+  &__header {
+    width: 100%;
+    padding: 16px 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    outline: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__item.active &__header {
+    color: var(--color-blue);
+  }
+
+  &__icon {
+    font-size: 12px;
+    transform: rotate(0deg);
+    transition: 0.3s;
+  }
+
+  &__item.active &__icon {
+    transform: rotate(180deg);
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: var(--color-white);
+    padding: 0 20px;
+  }
+
+  &__item.active &__content {
+    max-height: 500px;
+    padding: 16px 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid var(--color-background);
+    font-size: 18px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__row span {
+    opacity: 0.3;
+  }
+
+  &__buttons span {
+    display: inline-block;
+    margin-right: 24px;
+    opacity: 1;
+  }
+
+  &__buttons button {
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 8px;
   }
 }
 
@@ -45,6 +138,28 @@
       width: 100%;
       flex-direction: column-reverse;
       gap: 5px;
+    }
+  }
+
+  .content {
+    &__wrapper {
+      padding-top: 166px;
+    }
+    &__row {
+      flex-direction: column;
+      align-items: start;
+      padding: 10px 0;
+      border-top: 1px solid var(--color-background);
+    }
+    &__buttons {
+      width: 100%;
+      margin-top: 16px;
+    }
+    &__buttons span {
+      flex: 5;
+    }
+    &__buttons button {
+      flex: 1;
     }
   }
 }
