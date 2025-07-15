@@ -26,10 +26,10 @@
       </main>
     </div>
 
-    <div class="menu-groups active">
+    <div class="menu-groups">
       <div class="menu-groups__header">
         <div class="menu-groups__title">Группа контактов</div>
-        <div class="menu-groups__close">
+        <div class="close">
           <button>
             <svg
               width="24"
@@ -96,8 +96,47 @@
         </div>
 
         <div class="menu-groups__buttons">
-          <button class="button button_add-blue">Добавить</button>
-          <button class="button button_save">Сохранить</button>
+          <button class="button button_without-bg">Добавить</button>
+          <button class="button button_blue-bg">Сохранить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal__window">
+        <div class="close close_modal">
+          <button>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1894_185)">
+                <rect width="24" height="24" rx="6" fill="white" />
+                <path
+                  opacity="0.3"
+                  d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1894_185">
+                  <rect width="24" height="24" rx="6" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <h2 class="modal__title">Удалить группу?</h2>
+        <p class="modal__text">
+          Удаление группы повлечёт за собой удаление контактов, связанных с этой
+          группой
+        </p>
+        <div class="modal__buttons">
+          <button class="button button_blue-bg">Да, удалить</button>
+          <button class="button button_without-bg">Отмена</button>
         </div>
       </div>
     </div>

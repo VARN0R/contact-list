@@ -1,0 +1,20 @@
+.close button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.close button:hover g rect {
+  fill: black;
+  opacity: 0.3;
+  transition: 0.5s all;
+}
+
+.close {
+  &_modal {
+    position: absolute;
+    z-index: 3;
+    right: 16px;
+    top: 16px;
+  }
+}

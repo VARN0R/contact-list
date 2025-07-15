@@ -1,7 +1,9 @@
 "use strict";
-import "../styles/main.scss"; // путь может отличаться
-// import form from "./modules/form";
+import "../styles/main.scss";
+import { initModal } from "./modules/modal";
+import { initMenuGroups } from "./modules/menu-groups";
 
 window.addEventListener("DOMContentLoaded", () => {
-  // form();
+  const { openModal } = initModal();
+  initMenuGroups();
 });
