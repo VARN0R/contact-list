@@ -16,6 +16,50 @@
   --color-delete: #ea3d2f;
 }
 
+@font-face {
+  font-family: "Circe";
+  src: url("/fonts/Circe-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circe Extra";
+  src: url("/fonts/Circe-ExtraBold.woff2") format("woff2");
+
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circe";
+
+  src: url("/fonts/Circe-Thin.woff2") format("woff2");
+
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("/fonts/Circe-Regular.woff2") format("woff2");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("./fonts/Circe-Bold.woff2") format("woff2");
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Circe", sans-serif;
+}
+
 .container {
   width: 1160px;
   margin: 0 auto;
