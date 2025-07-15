@@ -1,17 +1,7 @@
+@use "../base/mixins" as *;
+
 .menu-groups {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 312px;
-  background-color: var(--color-white);
-  height: 100vh;
-  padding: 24px;
-  left: -100%;
-  transition: 0.6s all;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 2;
+  @include menu;
   &.active {
     visibility: visible;
     left: 0;
@@ -19,10 +9,7 @@
   }
 
   &__header {
-    height: 46px;
-    border-bottom: 1px solid var(--color-background);
-    display: flex;
-    justify-content: space-between;
+    @include menu-header;
   }
   &__item {
     display: flex;

@@ -1,0 +1,122 @@
+@use "../base/mixins" as *;
+
+.menu-add-contact {
+  @include menu;
+  &.active {
+    visibility: visible;
+    left: 0;
+    opacity: 1;
+  }
+
+  &__header {
+    @include menu-header;
+  }
+  &__item {
+    display: flex;
+    margin-top: 16px;
+  }
+
+  &__wrapper {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  &__input {
+    background-color: var(--color-background);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #333;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(42, 91, 215, 0.2);
+    }
+  }
+
+  // Кастомный dropdown
+  &__dropdown {
+    position: relative;
+    width: 100%;
+    user-select: none;
+  }
+  &__dropdown-selected {
+    background: var(--color-background);
+    border-radius: 8px;
+    padding: 10px 40px 10px 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    border: none;
+    box-shadow: none;
+    position: relative;
+  }
+  &__dropdown-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s;
+    pointer-events: none;
+  }
+  &__dropdown.open &__dropdown-arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &__dropdown-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    background-color: var(--color-background);
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    max-height: 220px;
+    overflow-y: auto;
+    padding: 4px 0;
+    display: none;
+  }
+  &__dropdown.open &__dropdown-list {
+    display: block;
+  }
+  &__dropdown-option {
+    padding: 10px 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #333;
+    border-radius: 6px;
+    transition: background 0.2s;
+    &:hover {
+      background: var(--color-white);
+    }
+  }
+
+  &__buttons {
+    position: fixed;
+    bottom: 24px;
+    left: 176px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-add-contact {
+    left: auto;
+    right: -100%;
+    &.active {
+      right: 0;
+      left: auto;
+    }
+    &__buttons {
+      left: auto;
+      right: 24px;
+    }
+  }
+}

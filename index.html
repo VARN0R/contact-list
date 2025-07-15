@@ -224,6 +224,73 @@
       </div>
     </div>
 
+    <div class="menu-add-contact active">
+      <div class="menu-add-contact__header">
+        <div class="menu-groups__title">Добавление контакта</div>
+        <div class="close">
+          <button>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1894_185)">
+                <rect width="24" height="24" rx="6" fill="white" />
+                <path
+                  opacity="0.3"
+                  d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1894_185">
+                  <rect width="24" height="24" rx="6" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-add-contact__wrapper">
+        <input
+          type="text"
+          class="menu-add-contact__input"
+          placeholder="Введите ФИО"
+        />
+        <input
+          type="text"
+          class="menu-add-contact__input"
+          placeholder="Введите номер"
+        />
+
+        <div class="menu-add-contact__dropdown">
+          <div class="menu-add-contact__dropdown-selected">
+            <span>Выберите контакт</span>
+            <svg
+              class="menu-add-contact__dropdown-arrow"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+            >
+              <path
+                d="M10.8849 0.294998L6.29492 4.875L1.70492 0.294998L0.294922 1.705L6.29492 7.705L12.2949 1.705L10.8849 0.294998Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+          <div class="menu-add-contact__dropdown-list"></div>
+        </div>
+
+        <div class="menu-add-contact__buttons">
+          <button class="button button_blue-bg">Сохранить</button>
+        </div>
+      </div>
+    </div>
+
     <div class="modal">
       <div class="modal__window">
         <div class="close close_modal">
