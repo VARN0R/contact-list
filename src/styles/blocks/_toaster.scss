@@ -1,0 +1,38 @@
+#toaster-container {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+.toaster {
+  min-width: 220px;
+  background: #222;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0.95;
+  font-size: 15px;
+  pointer-events: auto;
+  animation: fadeIn 0.3s;
+}
+.toaster-error {
+  background: #c0392b;
+}
+.toaster-success {
+  background: #27ae60;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+}
